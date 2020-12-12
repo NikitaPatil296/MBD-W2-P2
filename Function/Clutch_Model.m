@@ -1,4 +1,4 @@
-function Clutch_LockUp_Model(Action)
+function Clutch_Model(Action)
 %   SLDEMO_CLUTCHPLOT plot clutch time histories.
 %   SLDEMO_CLUTCHPLOT plots the input and output time histories of the clutch
 %   model.  
