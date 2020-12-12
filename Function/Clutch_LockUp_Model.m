@@ -143,8 +143,8 @@ if ~isempty(Vars) && ~isempty(Value),
       end % switch
 
       % Need to extract data from data structure sldemo_clutch_output
-      y_data=evalin('base',['sldemo_clutch_output.get(''', PlotMe ''')', '.Values.Data']);        
-      x_data=evalin('base',['sldemo_clutch_output.get(''', PlotMe ''')', '.Values.Time']);        
+      y_data=evalin('base',['Clutch_LockUp_Model_output.get(''', PlotMe ''')', '.Values.Data']);        
+      x_data=evalin('base',['Clutch_LockUp_Model_output.get(''', PlotMe ''')', '.Values.Time']);        
 
       plot(x_data,y_data, ...
           'LineStyle',LineStyleOrder{LineIndex}, ...
@@ -230,7 +230,7 @@ end % if FigOpen
 
 ReturnChar=sprintf('\n');      
 %%% Get Input and Output name info.    
-Name=find_system('sldemo_clutch','SearchDepth',1,'BlockType','Outport');
+Name=find_system('Clutch_LockUp_Model','SearchDepth',1,'BlockType','Outport');
 
 PortNumber = zeros(length(Name),1);
 OutputName = cell(length(Name),1);
